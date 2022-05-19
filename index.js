@@ -1,36 +1,19 @@
-alert("Registrese para acceder:");
-let usernameReg = prompt("username");
-let emailReg = prompt("email");
-let pwdReg =prompt("password");
-let resultadoReg = registro (usernameReg, emailReg, pwdReg);
 
-function registro(usernameReg,emailReg,pwdReg)
+let contador = 0;
+let usuario =[];
+
+while(contador <4)
 {
-	alert ("Inicie Sesion:");
+	let nombre = prompt("Ingrese su nombre");
+	let apellido = prompt("Ingrese su apellido");
+	let email = prompt("Ingrese su email");
+	let contrasenia = prompt("Ingrese su contrasenia");
+	usuario.push(nombre, apellido, email, contrasenia);
+	contador++;
+	break;
 
-	let username = prompt ("username o email");
-	let pwd = prompt("password");
-	let resultado = login (username,pwd)
-
-	if (resultado)
-	{
-		alert ("LOGIN EXITOSO.")
-	}
-	else{
-		alert("ALGUNO DE SUS DATOS ES INCORRECTO.")
-	}
-
-	function login(username,emailReg,pwd)
-{
-	if (username === usernameReg && pwd === pwdReg)
-	{
-		return true;
-	}
-	else
-	{
-		return false; 
-	}
 }
-}
+console.log("Los datos del usuario son:")
+console.log(usuario);
 
 
